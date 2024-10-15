@@ -1,0 +1,20 @@
+
+    <h1>aaa</h1>
+<button (click)="Ajouter()">ajouter dans une list</button><br> <br>
+<button (click)="suprimer()">suprimer last of liste</button><br><br>
+<input type="submit" value="{{nom}}" (click)="rand()">
+<br>
+<br>
+<input type="text" [(ngModel)]="msg" placeholder="Enter a message">
+<button (click)="toggleList()">{{ isVisible ? 'Hide List' : 'Show List' }}</button>
+
+<ul *ngIf="isVisible">
+    <li *ngFor="let item of list; "  [ngStyle]="{'color':color[i % color.length]}" >
+    {{ item }}
+    </li>
+    <li *ngIf="randd" [ngStyle]="{'color': color[i % color.length]}">
+        {{ item }}
+      </li>
+</ul>
+
+
